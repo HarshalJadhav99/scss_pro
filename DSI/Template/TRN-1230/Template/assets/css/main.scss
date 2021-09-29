@@ -1,0 +1,166 @@
+@import "var";
+@import "mixin";
+@media(max-width: 1399.98px) {
+    .feature-box {
+        @include featurebox(30px, 40px);
+    }
+    .feature-img {
+        @include feature-imgs(100%, 40px);
+    }
+    .feature-img2 {
+        @include feature-imgs(100%, 0px 20px 40px 20px);
+        max-width: 440px;
+    }
+    .feature-img3 {
+        @include feature-imgs(100%, 40px 0px 40px 0px)
+    }
+    .btnred {
+        @include primary-button;
+        &:hover {
+            background-color: transparent;
+            color: $primary-color;
+            border: 1px solid $primary-color;
+        }
+    }
+    .it-style {
+        color: $primary-color;
+    }
+    h1 {
+        @include h1-basecode(41px);
+    }
+    p {
+        @include pbasecode;
+    }
+    .p-ipadwel {
+        font-size: 19px;
+        line-height: 25px;
+    }
+    h2 {
+        @include h2style(32px);
+    }
+    .dsi-color {
+        color: $primary-color;
+    }
+    .welcome-space {
+        margin-top: 50px;
+    }
+    .welcome-color {
+        background-color: $welcome-bgcolor;
+    }
+    .p-color {
+        color: $primary-color;
+        font-family: $primary-font-family;
+        line-height: 37.43px;
+        font-size: 28px;
+        font-style: normal;
+    }
+    .p-img {
+        /* max-width: 184px; */
+        max-width: 100px;
+    }
+    .prg-style {
+        @include prg-style(18px);
+    }
+    .shadow1 {
+        @include imgshadows( box-shadow 500ms border 500ms, 400px);
+        /* box-shadow: 2px 2px 10px rgb(0 0 0 / 30%); */
+        &:hover {
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, .2);
+            border-bottom: 1px solid rgb(128, 0, 90);
+            border-left: 1px solid rgb(128, 0, 90);
+            border-top: 1px solid rebeccapurple;
+            border-right: 1px solid rebeccapurple;
+            border-radius: 10px;
+        }
+    }
+    /* .our-pro {
+        margin-bottom: 43px;
+    } */
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .feature-box {
+        @include featurebox(30px, 0px);
+        text-align: center;
+    }
+    .feature-img2 {
+        @include feature-imgs(100%, 0px);
+        max-width: 440px;
+    }
+    .p-ipadwel {
+        font-size: 15px;
+        text-align: center;
+    }
+    .feature-img {
+        max-width: 500px;
+    }
+    h1 {
+        @include h1-basecode(38px);
+    }
+    .welcome-space {
+        text-align: center;
+    }
+    .shadow1 {
+        @include imgshadows(box-shadow 500ms, 370px);
+    }
+    .shadow2 {
+        @include imgshadows(box-shadow 500ms, 337px);
+    }
+}
+
+@media (max-width: 767px) {
+    .feature-img {
+        @include feature-imgs(100%, 40px 10px 40px 10px)
+    }
+    .feature-box {
+        @include featurebox(30px 0px, 0px);
+        h1 {
+            text-align: center;
+            font-size: 28px;
+        }
+    }
+    .p-mobile p {
+        text-align: center;
+        font-size: 18px;
+    }
+    .btnmob {
+        text-align: center;
+        /* margin-left: 30px!important; */
+    }
+    .welcome-space,
+    h2 {
+        @include h2style(28px);
+        text-align: center;
+    }
+    .p-mobile2 {
+        font-size: 18px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .welcome-space {
+        margin-top: 0px;
+    }
+    .product-space {
+        text-align: center;
+    }
+    .prg-style {
+        @include prg-style(17px);
+    }
+    .feature-img3 {
+        @include feature-imgs(100%, 20px 0px 20px 0px);
+    }
+    .feature-img2 {
+        @include feature-imgs(100%, 0px 40px 20px 40px);
+        max-width: 452px;
+    }
+    .shadow1 {
+        @include imgshadows(box-shadow 500ms, 337px);
+    }
+    .shadow2 {
+        @include imgshadows(box-shadow 500ms, 337px);
+    }
+    .p-ipadwel {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
